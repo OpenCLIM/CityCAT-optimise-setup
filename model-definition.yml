@@ -1,0 +1,50 @@
+kind: M
+api_version: v1beta3
+metadata:
+  display_name: Global Urban_Flooding:CityCAt optimse setup
+  name: citycat-optimise-setup
+  publisher: Newcastle University
+  summary: >
+    The CityCAT optimisation model needs DEM, buildings and green-areas data in the right format. This is achived by this model
+  source_code: https://github.com/OpenCLIM/global-flood-impacts-optimise-setup
+  description: >
+    The CityCAT optimisation model needs DEM, buildings and green-areas data in the right format. This is achived by this model
+  contact_point_name: steve birkinshaw
+  contact_point_email: s.j.birkinshaw@ncl.ac.uk
+
+spec:
+  inputs:
+    dataslots:
+      - name: Buildings
+        description:
+          Building polygons saved in .gpkg format.
+        path: inputs/buildings/
+        required: false
+
+      - name: Green_areas
+        description:
+          Green area polygons saved in .gpkg format.
+        path: inputs/green_areas/
+        required: false
+
+      - name: Dem
+        description:
+          DEM (elevations) in asc format
+        path: inputs/dem/
+        required: false
+         
+        
+  outputs:
+    datasets:
+      - name: outputs/buildings/*
+        type: folder
+        description:
+          A shp file of existing building data for the city of interest.
+      - name: outputs/green-areas/*
+        type: folder
+        description:
+          GreenAreas.txt and GreenAreas_0.txt of the green areas
+      - name: outputs/dem/*
+        type: folder
+        description:
+          Baseline_DEM.asc, DEM.asc, Domain_DEM.asc
