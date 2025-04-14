@@ -18,7 +18,7 @@ The CityCAT optimisation model needs DEM, buildings and green-areas data in the 
 
 ## Outputs
 * Buildings
-  * Description: shape file of the buildings
+  * Description: Buildings.txt
   * Location: /data/buildings
 * Green-areas
   * Description: GreenAreas.txt and GreenAreas_0.txt of the green areas
