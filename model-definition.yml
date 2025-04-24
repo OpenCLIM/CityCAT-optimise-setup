@@ -1,7 +1,7 @@
 kind: M
 api_version: v1beta3
 metadata:
-  display_name: Global Urban_Flooding:CityCAt optimse setup
+  display_name: Global Urban_Flooding:CityCAT optimse setup
   name: citycat-optimise-setup
   publisher: Newcastle University
   summary: >
@@ -39,7 +39,7 @@ spec:
       - name: outputs/buildings/*
         type: folder
         description:
-          A shp file of existing building data for the city of interest.
+          Buildings.txt for building data for the city of interest.
       - name: outputs/green-areas/*
         type: folder
         description:
